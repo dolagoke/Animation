@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purdue Animation</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #5A3D2B;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Purdue logo sliding animation */
+        @keyframes slideLogo {
+            from { left: -200px; }
+            to { left: 100%; }
+        }
+
+        /* Purdue logo styling */
+        .purdue_logo {
+            position: absolute;
+            width: 250px;
+            height: 500px;
+            top: 40%;
+            left: -200px;
+            background-image: url('purdue_logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            animation: slideLogo 4s ease-in-out forwards;
+        }
+
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        .cit_text {
+            position: absolute;
+            font-size: 48px;
+            color: white;
+            opacity: 0;
+            animation: fadeInOut 3s 5s ease-in-out forwards;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="purdue_logo"></div>
+
+    <div class="cit_text">CIT Masterclass</div>
+
+</body>
+</html>
